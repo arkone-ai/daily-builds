@@ -20,9 +20,12 @@ How production AI agents are built: one failure that real agent harnesses hit, a
 | 14 Oct | Write tools with no brakes | confirm must equal the exact id | [`2026-10-14-write-tools-with-no-brakes`](2026-10-14-write-tools-with-no-brakes) |
 | 15 Oct | Nobody can say what the agent did | Log every tool call as an event | [`2026-10-15-nobody-can-say-what-the-agent-did`](2026-10-15-nobody-can-say-what-the-agent-did) |
 | 16 Oct | Routing with a coin flip | A decision model with a probability; low confidence goes to a person | [`2026-10-16-routing-with-confidence`](2026-10-16-routing-with-confidence) |
-| **Week 3** | **Scale and safety** | | Coming 17 to 23 Oct |
-
-Folders for week 3 already here: [`multi-agent fan-out`](2026-10-17-multi-agent-fan-out) (17 Oct), [`MCP across frameworks`](2026-10-22-mcp-across-frameworks) (22 Oct).
+| **Week 3** | **Scale and safety** | | |
+| 17 Oct | One agent is too slow for the job | Parallel subagents (written from OpenAI's guide, first run on recording) | [`2026-10-17-multi-agent-fan-out`](2026-10-17-multi-agent-fan-out) |
+| 18 Oct | Calls that are not urgent pay full price | One Message Batch: 48 of 48 in 225 s, half price | [`2026-10-18-ten-thousand-calls-that-are-not-urgent`](2026-10-18-ten-thousand-calls-that-are-not-urgent) |
+| 21 Oct | A prompt change that broke production | An eval set that tops up: only new cases run | [`2026-10-21-a-prompt-change-that-broke-production`](2026-10-21-a-prompt-change-that-broke-production) |
+| 22 Oct | Every framework speaks MCP differently | One MCPAdapter, any agent | [`2026-10-22-mcp-across-frameworks`](2026-10-22-mcp-across-frameworks) |
+| 19, 20, 23 Oct | Sandboxed tools, hosted runtimes, skills in CI | Coming | |
 
 **Watch them:** [Instagram @arkoneai](https://www.instagram.com/arkoneai/) · [X @arkone_ai](https://x.com/arkone_ai)
 **One email a week with all of them:** [arkone.ai/go/builds](https://arkone.ai/go/builds?utm_source=github&utm_medium=readme&utm_campaign=builds-2026q4)

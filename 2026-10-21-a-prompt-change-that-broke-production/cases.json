@@ -1,0 +1,52 @@
+[
+ {
+  "id": "case-01",
+  "input": "Label this ticket billing, bug or account: Charged twice for order 5521",
+  "target": "billing"
+ },
+ {
+  "id": "case-02",
+  "input": "Label this ticket billing, bug or account: App crashes on settings",
+  "target": "bug"
+ },
+ {
+  "id": "case-03",
+  "input": "Label this ticket billing, bug or account: Cannot log in after reset",
+  "target": "account"
+ },
+ {
+  "id": "case-04",
+  "input": "Label this ticket billing, bug or account: Need a VAT invoice",
+  "target": "billing"
+ },
+ {
+  "id": "case-05",
+  "input": "Label this ticket billing, bug or account: CSV export missing columns",
+  "target": "bug"
+ },
+ {
+  "id": "case-06",
+  "input": "Label this ticket billing, bug or account: Close my account",
+  "target": "account"
+ },
+ {
+  "id": "case-07",
+  "input": "Label this ticket billing, bug or account: Refund not received",
+  "target": "billing"
+ },
+ {
+  "id": "case-08",
+  "input": "Label this ticket billing, bug or account: Blank dashboard in Safari",
+  "target": "bug"
+ },
+ {
+  "id": "case-09",
+  "input": "Label this ticket billing, bug or account: 2FA codes never arrive",
+  "target": "account"
+ },
+ {
+  "id": "case-10",
+  "input": "Label this ticket billing, bug or account: Change billing email",
+  "target": "billing"
+ }
+]
