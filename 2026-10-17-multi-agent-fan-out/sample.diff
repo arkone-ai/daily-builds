@@ -1,0 +1,12 @@
+diff --git a/billing/refunds.py b/billing/refunds.py
+--- a/billing/refunds.py
++++ b/billing/refunds.py
+@@ -12,6 +12,18 @@ from billing.db import db
++def refund(order_id, amount, user):
++    order = db.query(f"SELECT * FROM orders WHERE id = {order_id}")
++    if amount > order["total"]:
++        amount = order["total"]
++    if user.role != "manager" and amount > 500:
++        raise PermissionError("needs a manager")
++    db.execute("UPDATE orders SET refunded = refunded + ? WHERE id = ?", (amount, order_id))
++    return {"order": order_id, "refunded": amount}

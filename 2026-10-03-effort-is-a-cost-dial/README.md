@@ -1,4 +1,4 @@
-# Claude Opus 5.5: one task, two effort settings
+# Effort is a cost dial: Claude Opus 5.5 at medium and max
 
 **Released** 22 September 2026 · [Anthropic release notes](https://platform.claude.com/docs/en/release-notes/api)
 

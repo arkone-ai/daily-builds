@@ -1,4 +1,4 @@
-# Ollama decision models: ticket triage with a confidence score
+# Routing with confidence: a decision model returns the choice and its probability
 
 **Released** 28 September 2026 in Ollama v0.35.0 · [release notes](https://github.com/ollama/ollama/releases/tag/v0.35.0)
 
