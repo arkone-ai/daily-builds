@@ -3,7 +3,8 @@
 #
 # Ollama v0.35.0 added /v1/systemone: decision models that return a choice and a
 # probability for each option instead of text. This sends three support tickets
-# to Nimble and prints the label it chose and how sure it was.
+# to Nimble, routes each to its queue, and sends any ticket the model is less
+# than 80% sure about to a person instead.
 #
 # Needs: Ollama 0.35.0 or later, jq.   Run:  ollama pull nimble && ./triage.sh
 set -euo pipefail
@@ -30,5 +31,7 @@ for ticket in "${tickets[@]}"; do
   }' \
   | curl -s http://localhost:11434/v1/systemone -H 'Content-Type: application/json' -d @- \
   | jq -r --arg t "$ticket" '.answers.label as $a
-      | "\($a.choice)\t\($a.probabilities[$a.choice] * 100 | floor)%\t\($t)"'
+      | ($a.probabilities[$a.choice]) as $p
+      | (if $p >= 0.8 then "queue:\($a.choice)" else "to a person" end) as $route
+      | "\($route)\t\($p * 100 | floor)%\t\($t)"'
 done

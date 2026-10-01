@@ -2,7 +2,9 @@
 
 **Released** 28 September 2026 in Ollama v0.35.0 · [release notes](https://github.com/ollama/ollama/releases/tag/v0.35.0)
 
-Decision models return a choice and a probability for each option instead of text, through the new `/v1/systemone` endpoint. No prompt to write, no output to parse. This script labels three support tickets as billing, bug or account and prints how sure the model was.
+**The failure.** A router that only returns a label cannot tell you when it is guessing, so a wrong guess goes straight to the wrong queue.
+
+**The fix.** Decision models return a choice and a probability for each option instead of text, through the new `/v1/systemone` endpoint. No prompt to write, no output to parse. This script labels three support tickets as billing, bug or account, routes each to its queue, and sends any ticket the model is less than 80% sure about to a person.
 
 ```bash
 ollama pull nimble
